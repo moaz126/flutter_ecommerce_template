@@ -55,12 +55,12 @@ class _MainPageState extends State<MainPage>
     Widget appBar = Container(
       height: kToolbarHeight + MediaQuery.of(context).padding.top,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          IconButton(
+          /* IconButton(
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => NotificationsPage())),
-              icon: Icon(Icons.notifications)),
+              icon: Icon(Icons.notifications)), */
           IconButton(
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => SearchPage())),
@@ -206,9 +206,9 @@ class _MainPageState extends State<MainPage>
                     SliverToBoxAdapter(
                       child: appBar,
                     ),
-                    SliverToBoxAdapter(
+                    /*  SliverToBoxAdapter(
                       child: topHeader,
-                    ),
+                    ), */
                     SliverToBoxAdapter(
                       child: ProductList(
                         products: products,

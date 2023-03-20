@@ -1,4 +1,3 @@
-
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
 
@@ -10,13 +9,12 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  TextEditingController email =
-      TextEditingController(text: 'example@email.com');
+  TextEditingController phoneNumber =
+      TextEditingController(text: '+2431111111');
 
   TextEditingController password = TextEditingController(text: '12345678');
 
   TextEditingController cmfPassword = TextEditingController(text: '12345678');
-
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +94,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: TextField(
-                    controller: email,
+                    controller: phoneNumber,
+                    keyboardType: TextInputType.number,
                     style: TextStyle(fontSize: 16.0),
                   ),
                 ),
@@ -149,55 +148,50 @@ class _RegisterPageState extends State<RegisterPage> {
     );
 
     return Scaffold(
-
-              body: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage('assets/background.jpg'),
-                            fit: BoxFit.cover)
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: transparentYellow,
-
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 28.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Spacer(flex:3),
-                        title,
-                        Spacer(),
-
-                        subTitle,
-                        Spacer(flex:2),
-
-                        registerForm,
-                        Spacer(flex:2),
-                        Padding(
-                            padding: EdgeInsets.only(bottom: 20), child: socialRegister)
-                      ],
-                    ),
-                  ),
-
-                  Positioned(
-                    top: 35,
-                    left: 5,
-                    child: IconButton(
-                      color: Colors.white,
-                      icon: Icon(Icons.arrow_back),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                  )
-                ],
-              ),
-            );
+      body: Stack(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/background.jpg'),
+                    fit: BoxFit.cover)),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: transparentYellow,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 28.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Spacer(flex: 3),
+                title,
+                Spacer(),
+                subTitle,
+                Spacer(flex: 2),
+                registerForm,
+                Spacer(flex: 2),
+                Padding(
+                    padding: EdgeInsets.only(bottom: 20), child: socialRegister)
+              ],
+            ),
+          ),
+          Positioned(
+            top: 35,
+            left: 5,
+            child: IconButton(
+              color: Colors.white,
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

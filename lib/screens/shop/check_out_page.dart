@@ -121,7 +121,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                     ),
                   ),
                 ),
-                Padding(
+                /*  Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     'Payment',
@@ -144,7 +144,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                     loop: false,
                     fade: 0.7,
                   ),
-                ),
+                ), */
                 SizedBox(height: 24),
                 Center(
                     child: Padding(

@@ -30,7 +30,7 @@ class ProfilePage extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Container(
+                /* Container(
                   margin: EdgeInsets.symmetric(vertical: 16.0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
@@ -110,17 +110,22 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
+                ), */
                 ListTile(
                   title: Text('Settings'),
                   subtitle: Text('Privacy and logout'),
-                  leading: Image.asset('assets/icons/settings_icon.png', fit: BoxFit.scaleDown, width: 30, height: 30,),
+                  leading: Image.asset(
+                    'assets/icons/settings_icon.png',
+                    fit: BoxFit.scaleDown,
+                    width: 30,
+                    height: 30,
+                  ),
                   trailing: Icon(Icons.chevron_right, color: yellow),
-                  onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => SettingsPage())),
+                  onTap: () => Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => SettingsPage())),
                 ),
                 Divider(),
-                ListTile(
+                /*  ListTile(
                   title: Text('Help & Support'),
                   subtitle: Text('Help center and legal support'),
                   leading: Image.asset('assets/icons/support.png'),
@@ -135,10 +140,10 @@ class ProfilePage extends StatelessWidget {
                   subtitle: Text('Questions and Answer'),
                   leading: Image.asset('assets/icons/faq.png'),
                   trailing: Icon(Icons.chevron_right, color: yellow),
-                  onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => FaqPage())),
+                  onTap: () => Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => FaqPage())),
                 ),
-                Divider(),
+                Divider(), */
               ],
             ),
           ),
