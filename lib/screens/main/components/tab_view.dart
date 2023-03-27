@@ -8,38 +8,38 @@ class TabView extends StatelessWidget {
     Category(
       Color(0xffFCE183),
       Color(0xffF68D7F),
-      'Gadgets',
-      'assets/jeans_5.png',
+      'Водопровод',
+      'assets/category1.png',
     ),
     Category(
       Color(0xffF749A2),
       Color(0xffFF7375),
-      'Clothes',
-      'assets/jeans_5.png',
+      'Канализация',
+      'assets/category2.png',
     ),
     Category(
       Color(0xff00E9DA),
       Color(0xff5189EA),
-      'Fashion',
-      'assets/jeans_5.png',
+      'Водонагреватели',
+      'assets/category3.png',
     ),
     Category(
       Color(0xffAF2D68),
       Color(0xff632376),
-      'Home',
-      'assets/jeans_5.png',
+      'Сантехническая мебель',
+      'assets/category4.png',
     ),
     Category(
       Color(0xff36E892),
       Color(0xff33B2B9),
-      'Beauty',
-      'assets/jeans_5.png',
+      'Санфаянс',
+      'assets/category5.png',
     ),
     Category(
       Color(0xffF123C4),
       Color(0xff668CEA),
-      'Appliances',
-      'assets/jeans_5.png',
+      'Утеплители для труб',
+      'assets/category6.png',
     ),
   ];
 
@@ -60,7 +60,7 @@ class TabView extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Container(
+                /* Container(
                     margin: EdgeInsets.all(8.0),
                     height: MediaQuery.of(context).size.height / 9,
                     width: MediaQuery.of(context).size.width,
@@ -69,7 +69,7 @@ class TabView extends StatelessWidget {
                         itemCount: categories.length,
                         itemBuilder: (_, index) => CategoryCard(
                               category: categories[index],
-                            ))),
+                            ))), */
                 SizedBox(
                   height: 16.0,
                 ),

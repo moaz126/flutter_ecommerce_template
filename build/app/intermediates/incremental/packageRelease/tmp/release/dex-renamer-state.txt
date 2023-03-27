@@ -1,0 +1,4 @@
+#Mon Mar 27 05:52:25 PKT 2023
+base.0=C\:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

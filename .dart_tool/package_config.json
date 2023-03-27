@@ -218,6 +218,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "get",
+      "rootUri": "file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "glob",
       "rootUri": "file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.1",
       "packageUri": "lib/",
@@ -398,6 +404,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "sizer",
+      "rootUri": "file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/sizer-2.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Users/moazz/moaz_files/flutter_windows_2.10.1-stable/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -470,6 +482,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "universal_io",
+      "rootUri": "file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "vector_graphics",
       "rootUri": "file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.1",
       "packageUri": "lib/",
@@ -524,7 +542,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-03-15T21:53:58.788509Z",
+  "generated": "2023-03-23T07:16:02.257109Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

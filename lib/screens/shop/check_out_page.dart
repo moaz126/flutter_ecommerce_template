@@ -44,7 +44,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("Check Out",
+          child: Text("Проверить",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,
@@ -61,14 +61,14 @@ class _CheckOutPageState extends State<CheckOutPage> {
         elevation: 0.0,
         iconTheme: IconThemeData(color: darkGrey),
         actions: <Widget>[
-          IconButton(
+          /*  IconButton(
             icon: Image.asset('assets/icons/denied_wallet.png'),
             onPressed: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (_) => UnpaidPage())),
-          )
+          ) */
         ],
         title: Text(
-          'Checkout',
+          'Проверить',
           style: TextStyle(
               color: darkGrey, fontWeight: FontWeight.w500, fontSize: 18.0),
         ),
@@ -89,14 +89,14 @@ class _CheckOutPageState extends State<CheckOutPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        'Subtotal',
+                        'Промежуточный итог',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
                       Text(
-                        products.length.toString() + ' items',
+                        products.length.toString() + ' предметы',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

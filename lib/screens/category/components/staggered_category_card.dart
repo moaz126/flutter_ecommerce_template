@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
+
+import '../../category_product/category_product.dart';
 
 class CategoryCard extends StatelessWidget {
   final Color begin;
@@ -56,12 +60,15 @@ class CategoryCard extends StatelessWidget {
         children: <Widget>[
           Align(
               alignment: Alignment(-1, 0),
-              child: Text(
-                categoryName,
-                style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+              child: SizedBox(
+                width: 45.w,
+                child: Text(
+                  categoryName,
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
               )),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -75,15 +82,20 @@ class CategoryCard extends StatelessWidget {
                   assetPath,
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(24))),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Text(
-                  'View more',
-                  style: TextStyle(color: end, fontWeight: FontWeight.bold),
+              InkWell(
+                onTap: () {
+                  Get.to(() => CategoryProducts());
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(24))),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0, vertical: 8.0),
+                  child: Text(
+                    'View more',
+                    style: TextStyle(color: end, fontWeight: FontWeight.bold),
+                  ),
                 ),
               )
             ],

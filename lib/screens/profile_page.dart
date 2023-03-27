@@ -112,8 +112,8 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ), */
                 ListTile(
-                  title: Text('Settings'),
-                  subtitle: Text('Privacy and logout'),
+                  title: Text('Настройки'),
+                  subtitle: Text('Конфиденциальность и выход'),
                   leading: Image.asset(
                     'assets/icons/settings_icon.png',
                     fit: BoxFit.scaleDown,

@@ -134,6 +134,10 @@ frontend_server_client
 2.12
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-3.2.0/
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-3.2.0/lib/
+get
+2.15
+file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.5/
+file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.5/lib/
 glob
 2.15
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.1/
@@ -254,6 +258,10 @@ shelf_web_socket
 2.17
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_web_socket-1.0.3/
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_web_socket-1.0.3/lib/
+sizer
+2.12
+file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/sizer-2.0.15/
+file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/sizer-2.0.15/lib/
 source_gen
 2.18
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/source_gen-1.2.7/
@@ -298,6 +306,10 @@ typed_data
 2.12
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.1/
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.1/lib/
+universal_io
+2.15
+file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.0/
+file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.0/lib/
 vector_graphics
 2.17
 file:///C:/Users/moazz/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.1/

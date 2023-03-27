@@ -33,17 +33,23 @@ class _IntroPageState extends State<IntroPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
+                    SizedBox(
+                      height: 50,
+                    ),
                     Center(
                       child: Image.asset(
-                        'assets/firstScreen.png',
-                        height: 200,
-                        width: 200,
+                        'assets/logobg.png',
+                        height: 160,
+                        width: 160,
                       ),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 32),
                       child: Text(
-                        'Get Any Thing Online',
+                        'Получите любую вещь онлайн',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
@@ -53,7 +59,7 @@ class _IntroPageState extends State<IntroPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 32, vertical: 16.0),
                       child: Text(
-                        'You can buy anything ranging from digital products to hardware within few clicks.',
+                        'Вы можете купить все, от цифровых продуктов до аппаратного обеспечения, всего за несколько кликов.',
                         textAlign: TextAlign.right,
                         style: TextStyle(color: Colors.grey, fontSize: 12.0),
                       ),
@@ -74,7 +80,7 @@ class _IntroPageState extends State<IntroPage> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 32),
                       child: Text(
-                        'Shipping to anywhere ',
+                        'Доставка в любую точку',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
@@ -84,7 +90,7 @@ class _IntroPageState extends State<IntroPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 32, vertical: 16.0),
                       child: Text(
-                        'We will ship to anywhere in the world, With 30 day 100% money back policy.',
+                        'Мы отправим в любую точку мира, с 30-дневной политикой возврата денег 100%.',
                         textAlign: TextAlign.right,
                         style: TextStyle(color: Colors.grey, fontSize: 12.0),
                       ),
@@ -105,7 +111,7 @@ class _IntroPageState extends State<IntroPage> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 32),
                       child: Text(
-                        'On-time delivery',
+                        'Своевременная доставка',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
@@ -115,7 +121,7 @@ class _IntroPageState extends State<IntroPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 32, vertical: 16.0),
                       child: Text(
-                        'You can track your product with our powerful tracking service.',
+                        'Вы можете отслеживать свой продукт с помощью нашей мощной службы отслеживания.',
                         textAlign: TextAlign.right,
                         style: TextStyle(color: Colors.grey, fontSize: 12.0),
                       ),

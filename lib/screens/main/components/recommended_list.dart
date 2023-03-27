@@ -1,21 +1,22 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/models/product.dart';
+import 'package:ecommerce_int2/screens/main/components/show_products.dart';
 import 'package:ecommerce_int2/screens/product/product_page.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedList extends StatelessWidget {
   List<Product> products = [
-    Product('assets/bag_1.png', 'Bag', 'Beautiful bag', 2.33),
-    Product('assets/cap_5.png', 'Cap', 'Cap with beautiful design', 10),
-    Product('assets/jeans_1.png', 'Jeans', 'Jeans for you', 20),
-    Product('assets/womanshoe_3.png', 'Woman Shoes',
+    Product('assets/product1.jpg', 'Bag', 'Beautiful bag', 2.33),
+    Product('assets/product2.jpg', 'Cap', 'Cap with beautiful design', 10),
+    Product('assets/category1.png', 'Jeans', 'Jeans for you', 20),
+    Product('assets/category2.png', 'Woman Shoes',
         'Shoes with special discount', 30),
-    Product('assets/bag_10.png', 'Bag Express', 'Bag for your shops', 40),
-    Product('assets/jeans_3.png', 'Jeans', 'Beautiful Jeans', 102.33),
-    Product('assets/ring_1.png', 'Silver Ring', 'Description', 52.33),
-    Product('assets/shoeman_7.png', 'Shoes', 'Description', 62.33),
-    Product('assets/headphone_9.png', 'Headphones', 'Description', 72.33),
+    Product('assets/category3.png', 'Bag Express', 'Bag for your shops', 40),
+    Product('assets/category4.png', 'Jeans', 'Beautiful Jeans', 102.33),
+    Product('assets/category5.png', 'Silver Ring', 'Description', 52.33),
+    Product('assets/category6.png', 'Shoes', 'Description', 62.33),
+    Product('assets/product1.jpg', 'Headphones', 'Description', 72.33),
   ];
 
   @override
@@ -36,7 +37,7 @@ class RecommendedList extends StatelessWidget {
               ),
               Center(
                   child: Text(
-                'Recommended',
+                'Рекомендуемые',
                 style: TextStyle(
                     color: darkGrey,
                     fontSize: 16.0,
@@ -47,8 +48,17 @@ class RecommendedList extends StatelessWidget {
         ),
         Flexible(
           child: Container(
-            padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
-            child: MasonryGridView.count(
+              padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
+              child: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+                childAspectRatio: 0.77,
+                padding: EdgeInsets.all(16),
+                children: products
+                    .map((product) => ProductWidget(product: product))
+                    .toList(),
+              ) /* MasonryGridView.count(
               physics: NeverScrollableScrollPhysics(),
               padding: EdgeInsets.zero,
               crossAxisCount: 4,
@@ -77,8 +87,8 @@ class RecommendedList extends StatelessWidget {
               ),
               mainAxisSpacing: 4.0,
               crossAxisSpacing: 4.0,
-            ),
-          ),
+            ), */
+              ),
         ),
       ],
     );
