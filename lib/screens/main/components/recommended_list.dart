@@ -54,7 +54,7 @@ class RecommendedList extends StatelessWidget {
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
                 childAspectRatio: 0.77,
-                padding: EdgeInsets.all(16),
+                padding: EdgeInsets.only(left: 16, right: 16),
                 children: products
                     .map((product) => ProductWidget(product: product))
                     .toList(),
