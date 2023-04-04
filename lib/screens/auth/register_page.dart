@@ -1,6 +1,7 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
 
+import '../../constant/colors.dart';
 import 'forgot_password_page.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -152,9 +153,11 @@ class _RegisterPageState extends State<RegisterPage> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-                image: DecorationImage(
+              color: backgroundColor,
+              /*   image: DecorationImage(
                     image: AssetImage('assets/background.jpg'),
-                    fit: BoxFit.cover)),
+                    fit: BoxFit.cover) */
+            ),
           ),
           Container(
             decoration: BoxDecoration(

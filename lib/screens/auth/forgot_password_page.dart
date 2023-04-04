@@ -1,6 +1,7 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
 
+import '../../constant/colors.dart';
 import 'confirm_otp_page.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
@@ -18,8 +19,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     Widget background = Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/background.jpg'), fit: BoxFit.cover),
+        color: backgroundColor,
+        /*  image: DecorationImage(
+            image: AssetImage('assets/background.jpg'), fit: BoxFit.cover), */
       ),
       foregroundDecoration: BoxDecoration(color: transparentYellow),
     );
@@ -152,8 +154,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
       child: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/background.jpg'), fit: BoxFit.cover)),
+          color: backgroundColor,
+          /*  image: DecorationImage(
+                image: AssetImage('assets/background.jpg'), fit: BoxFit.cover) */
+        ),
         child: Container(
           decoration: BoxDecoration(color: transparentYellow),
           child: Scaffold(

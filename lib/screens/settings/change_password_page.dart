@@ -18,6 +18,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
       child: Container(
         height: 80,
         width: width / 1.5,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
             gradient: mainButton,
             boxShadow: [
@@ -29,7 +30,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("Confirm Change",
+          child: Text("Подтвердить",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,
@@ -48,7 +49,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         title: Text(
-          'Settings',
+          'Настройки',
           style: TextStyle(color: darkGrey),
         ),
         elevation: 0,
@@ -68,9 +69,10 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 48.0,top:16.0),
+                            padding:
+                                const EdgeInsets.only(bottom: 48.0, top: 16.0),
                             child: Text(
-                              'Change Password',
+                              'Изменить пароль',
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -80,7 +82,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                           Padding(
                             padding: const EdgeInsets.only(bottom: 12.0),
                             child: Text(
-                              'Enter your current password',
+                              'Введите ваш текущий пароль',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -94,14 +96,14 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                               child: TextField(
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: 'Existing Password',
+                                    hintText: 'Существующий пароль',
                                     hintStyle: TextStyle(fontSize: 12.0)),
                               )),
                           Padding(
                             padding:
                                 const EdgeInsets.only(top: 24, bottom: 12.0),
                             child: Text(
-                              'Enter new password',
+                              'Введите новый пароль',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -115,14 +117,14 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                               child: TextField(
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: 'New Password',
+                                    hintText: 'Новый пароль',
                                     hintStyle: TextStyle(fontSize: 12.0)),
                               )),
                           Padding(
                             padding:
                                 const EdgeInsets.only(top: 24, bottom: 12.0),
                             child: Text(
-                              'Retype new password',
+                              'Введите повторно новый пароль',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -136,7 +138,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                               child: TextField(
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: 'Retype Password',
+                                    hintText: 'Введите пароль еще раз',
                                     hintStyle: TextStyle(fontSize: 12.0)),
                               )),
                         ],

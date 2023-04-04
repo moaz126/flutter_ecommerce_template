@@ -4,7 +4,7 @@
             "outputFile": "com.example.flutter_ecommerce_template.app-mergeReleaseResources-9:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\Tecbeck\\Downloads\\flutter_ecommerce_template\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

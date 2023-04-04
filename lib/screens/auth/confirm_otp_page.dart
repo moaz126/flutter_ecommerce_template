@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
+import '../../constant/colors.dart';
+
 class ConfirmOtpPage extends StatefulWidget {
   @override
   _ConfirmOtpPageState createState() => _ConfirmOtpPageState();
@@ -149,8 +151,10 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
       onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
       child: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/background.jpg'), fit: BoxFit.cover)),
+          color: backgroundColor,
+          /*  image: DecorationImage(
+                image: AssetImage('assets/background.jpg'), fit: BoxFit.cover) */
+        ),
         child: Container(
           decoration: BoxDecoration(color: transparentYellow),
           child: Scaffold(
@@ -178,8 +182,10 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
                             highlightColor: Colors.white,
                             highlightAnimation: true,
                             highlightAnimationBeginColor: Colors.white,
-                            highlightAnimationEndColor: Theme.of(context).primaryColor,
-                            pinTextAnimatedSwitcherDuration: Duration(milliseconds: 500),
+                            highlightAnimationEndColor:
+                                Theme.of(context).primaryColor,
+                            pinTextAnimatedSwitcherDuration:
+                                Duration(milliseconds: 500),
                             wrapAlignment: WrapAlignment.center,
                             hasTextBorderColor: Colors.transparent,
                             highlightPinBoxColor: Colors.white,

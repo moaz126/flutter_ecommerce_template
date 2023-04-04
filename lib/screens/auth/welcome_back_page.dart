@@ -1,6 +1,7 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
 
+import '../../constant/colors.dart';
 import 'register_page.dart';
 
 class WelcomeBackPage extends StatefulWidget {
@@ -153,9 +154,11 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-                image: DecorationImage(
+              color: backgroundColor,
+              /* image: DecorationImage(
                     image: AssetImage('assets/background.jpg'),
-                    fit: BoxFit.cover)),
+                    fit: BoxFit.cover) */
+            ),
           ),
           Container(
             decoration: BoxDecoration(
