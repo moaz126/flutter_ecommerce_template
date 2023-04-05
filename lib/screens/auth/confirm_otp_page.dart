@@ -46,7 +46,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
   @override
   Widget build(BuildContext context) {
     Widget title = Text(
-      'Confirm your OTP',
+      'Подтвердите свой OTP',
       style: TextStyle(
           color: Colors.white,
           fontSize: 34.0,
@@ -63,7 +63,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
     Widget subTitle = Padding(
         padding: const EdgeInsets.only(right: 56.0),
         child: Text(
-          'Please wait, we are confirming your OTP',
+          'Подождите, мы подтверждаем ваш OTP',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0,
@@ -80,7 +80,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
           child: Center(
-              child: new Text("Verify",
+              child: new Text("Проверять",
                   style: const TextStyle(
                       color: const Color(0xfffefefe),
                       fontWeight: FontWeight.w600,
@@ -126,7 +126,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          "Resend again after ",
+          "Отправить еще раз после ",
           style: TextStyle(
             fontStyle: FontStyle.italic,
             color: Color.fromRGBO(255, 255, 255, 0.5),

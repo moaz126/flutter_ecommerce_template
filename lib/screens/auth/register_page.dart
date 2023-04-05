@@ -20,7 +20,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     Widget title = Text(
-      'Glad To Meet You',
+      'Рад познакомиться с вами',
       style: TextStyle(
           color: Colors.white,
           fontSize: 34.0,
@@ -37,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
     Widget subTitle = Padding(
         padding: const EdgeInsets.only(right: 56.0),
         child: Text(
-          'Create your new account for future uses.',
+          'Создайте новую учетную запись для использования в будущем.',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0,
@@ -56,7 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
           child: Center(
-              child: new Text("Register",
+              child: new Text("регистр",
                   style: const TextStyle(
                       color: const Color(0xfffefefe),
                       fontWeight: FontWeight.w600,
@@ -177,8 +177,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 Spacer(flex: 2),
                 registerForm,
                 Spacer(flex: 2),
-                Padding(
-                    padding: EdgeInsets.only(bottom: 20), child: socialRegister)
+                /*  Padding(
+                    padding: EdgeInsets.only(bottom: 20), child: socialRegister) */
               ],
             ),
           ),

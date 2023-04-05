@@ -1,7 +1,9 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../constant/colors.dart';
+import '../settings/change_password_page.dart';
 import 'register_page.dart';
 
 class WelcomeBackPage extends StatefulWidget {
@@ -18,7 +20,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
   @override
   Widget build(BuildContext context) {
     Widget welcomeBack = Text(
-      'Welcome Back Roberto,',
+      'С возвращением Роберто,',
       style: TextStyle(
           color: Colors.white,
           fontSize: 34.0,
@@ -35,7 +37,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
     Widget subTitle = Padding(
         padding: const EdgeInsets.only(right: 56.0),
         child: Text(
-          'Login to your account using\nMobile number',
+          'Войдите в свою учетную запись, используя\nНомер мобильного телефона',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0,
@@ -54,7 +56,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
           child: Center(
-              child: new Text("Log In",
+              child: new Text("Авторизоваться",
                   style: const TextStyle(
                       color: const Color(0xfffefefe),
                       fontWeight: FontWeight.w600,
@@ -127,7 +129,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'Forgot your password? ',
+            'Забыли пароль? ',
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Color.fromRGBO(255, 255, 255, 0.5),
@@ -135,9 +137,11 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Get.to(() => ChangePasswordPage());
+            },
             child: Text(
-              'Reset password',
+              'Сброс пароля',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,

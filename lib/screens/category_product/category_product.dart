@@ -60,7 +60,7 @@ class _CategoryProductsState extends State<CategoryProducts> {
                     crossAxisCount: 2,
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
-                    childAspectRatio: 0.7,
+                    childAspectRatio: 0.6,
                     padding: EdgeInsets.only(left: 16, right: 16),
                     children: products
                         .map((product) => ProductWidget(product: product))

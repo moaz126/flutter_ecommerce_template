@@ -27,7 +27,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     );
 
     Widget title = Text(
-      'Forgot your Password?',
+      'Забыли пароль?',
       style: TextStyle(
           color: Colors.white,
           fontSize: 34.0,
@@ -44,7 +44,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     Widget subTitle = Padding(
         padding: const EdgeInsets.only(right: 56.0),
         child: Text(
-          'Enter your registered mobile number to get the OTP',
+          'Введите свой зарегистрированный номер мобильного телефона, чтобы получить OTP',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0,
@@ -63,7 +63,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
           child: Center(
-              child: new Text("Send OTP",
+              child: new Text("Отправлять OTP",
                   style: const TextStyle(
                       color: const Color(0xfffefefe),
                       fontWeight: FontWeight.w600,
@@ -130,7 +130,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Didn't receive the OPT? ",
+              "Не получили OTP? ",
               style: TextStyle(
                 fontStyle: FontStyle.italic,
                 color: Color.fromRGBO(255, 255, 255, 0.5),
@@ -140,7 +140,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             InkWell(
               onTap: () {},
               child: Text(
-                'Resend again',
+                'Отправить еще раз',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

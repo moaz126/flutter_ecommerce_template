@@ -74,7 +74,7 @@ class _CategoryListPageState extends State<CategoryListPage> {
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: Text(
-                  'Category List',
+                  'Список категорий',
                   style: TextStyle(
                     color: darkGrey,
                     fontSize: 22,
@@ -93,7 +93,7 @@ class _CategoryListPageState extends State<CategoryListPage> {
                 controller: searchController,
                 decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Search',
+                    hintText: 'Поиск',
                     prefixIcon: SvgPicture.asset(
                       'assets/icons/search_icon.svg',
                       fit: BoxFit.scaleDown,

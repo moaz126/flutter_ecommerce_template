@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_int2/models/product.dart';
 
+import '../../product/product_page.dart';
+
 class ProductWidget extends StatelessWidget {
   final Product product;
 
@@ -8,45 +10,51 @@ class ProductWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 1,
-            blurRadius: 5,
-            offset: Offset(0, 3),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.asset(
-              product.image,
-              height: 150,
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => ProductPage(product: product)));
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(8),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 1,
+              blurRadius: 5,
+              offset: Offset(0, 3),
             ),
-          ),
-          SizedBox(height: 8),
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 10),
-            child: Text(
-              product.name,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.asset(
+                product.image,
+                height: 150,
               ),
             ),
-          ),
-          SizedBox(height: 4),
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 10),
-            child: Text('\$${product.price}'),
-          ),
-        ],
+            SizedBox(height: 8),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10),
+              child: Text(
+                product.name,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(height: 4),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10),
+              child: Text('\$${product.price}'),
+            ),
+          ],
+        ),
       ),
     );
   }

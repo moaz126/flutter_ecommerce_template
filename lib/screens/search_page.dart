@@ -94,7 +94,7 @@ class _SearchPageState extends State<SearchPage>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  'Search',
+                  'Поиск',
                   style: TextStyle(
                     color: darkGrey,
                     fontSize: 22,
@@ -146,7 +146,7 @@ class _SearchPageState extends State<SearchPage>
                     searchResults.clear();
                   },
                   child: Text(
-                    'Clear',
+                    'Прозрачный',
                     style: TextStyle(color: Colors.red),
                   ),
                 ),

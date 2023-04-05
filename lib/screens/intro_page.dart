@@ -175,7 +175,7 @@ class _IntroPageState extends State<IntroPage> {
                           opacity: pageIndex != 2 ? 1.0 : 0.0,
                           child: TextButton(
                             child: Text(
-                              'SKIP',
+                              'ПРОПУСКАТЬ',
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -191,7 +191,7 @@ class _IntroPageState extends State<IntroPage> {
                         pageIndex != 2
                             ? TextButton(
                                 child: Text(
-                                  'NEXT',
+                                  'СЛЕДУЮЩИЙ',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -206,7 +206,7 @@ class _IntroPageState extends State<IntroPage> {
                               )
                             : TextButton(
                                 child: Text(
-                                  'FINISH',
+                                  'ЗАКАНЧИВАТЬ',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,

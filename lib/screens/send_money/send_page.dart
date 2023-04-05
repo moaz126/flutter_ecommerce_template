@@ -65,7 +65,7 @@ class _SendPageState extends State<SendPage> {
               child: TextField(
                 cursorColor: darkGrey,
                 decoration: InputDecoration(
-                    hintText: 'Search',
+                    hintText: 'Поиск',
                     contentPadding: EdgeInsets.zero,
                     border: InputBorder.none,
                     prefixIcon: SvgPicture.asset(

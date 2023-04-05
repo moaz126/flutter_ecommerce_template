@@ -61,7 +61,7 @@ class ProductOption extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                       child: Center(
                         child: Text(
-                          'Buy Now',
+                          'Купить сейчас',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -86,11 +86,14 @@ class ProductOption extends StatelessWidget {
                               bottomLeft: Radius.circular(10.0))),
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                       child: Center(
-                        child: Text(
-                          'Add to cart',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0),
+                          child: Text(
+                            'Добавить в корзину',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),

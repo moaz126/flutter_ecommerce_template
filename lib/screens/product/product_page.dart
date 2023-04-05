@@ -45,7 +45,7 @@ class _ProductPageState extends State<ProductPage> {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("View Product",
+          child: Text("Посмотреть продукт",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,
@@ -110,7 +110,7 @@ class _ProductPageState extends State<ProductPage> {
                   child: Row(
                     children: <Widget>[
                       Container(
-                        width: 90,
+                        width: 120,
                         height: 40,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(253, 192, 84, 1),
@@ -119,7 +119,7 @@ class _ProductPageState extends State<ProductPage> {
                               Border.all(color: Color(0xFFFFFFFF), width: 0.5),
                         ),
                         child: Center(
-                          child: new Text("Details",
+                          child: new Text("Подробности",
                               style: const TextStyle(
                                   color: const Color(0xeefefefe),
                                   fontWeight: FontWeight.w300,
