@@ -1,4 +1,4 @@
-#Wed Apr 05 15:06:49 PKT 2023
-base.0=C\:\\Users\\Tecbeck\\Downloads\\flutter_ecommerce_template\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Sun Apr 09 23:18:19 PKT 2023
+base.0=C\:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template-1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

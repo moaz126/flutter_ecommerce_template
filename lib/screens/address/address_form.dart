@@ -7,9 +7,11 @@ class AddAddressForm extends StatelessWidget {
     return SizedBox(
       height: 500,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          SizedBox(
+            height: 10,
+          ),
           Container(
             padding: EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
             decoration: BoxDecoration(
@@ -18,8 +20,11 @@ class AddAddressForm extends StatelessWidget {
             ),
             child: TextField(
               decoration: InputDecoration(
-                  border: InputBorder.none, hintText: 'Flat Number/House Number'),
+                  border: InputBorder.none, hintText: 'Ваше имя'),
             ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           Container(
             padding: EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
@@ -28,11 +33,41 @@ class AddAddressForm extends StatelessWidget {
               color: Colors.white,
             ),
             child: TextField(
-              decoration:
-                  InputDecoration(border: InputBorder.none, hintText: 'Street'),
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                  border: InputBorder.none, hintText: 'Номер телефона'),
             ),
           ),
-          Column(
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+              color: Colors.white,
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                  border: InputBorder.none, hintText: 'Адрес доставки'),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+              color: Colors.white,
+            ),
+            child: TextField(
+              maxLines: 5,
+              decoration: InputDecoration(
+                  border: InputBorder.none, hintText: 'Любые комментарии'),
+            ),
+          ),
+          /* Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
@@ -99,7 +134,7 @@ class AddAddressForm extends StatelessWidget {
               ),
               Text('Add this to address bookmark')
             ],
-          )
+          ) */
         ],
       ),
     );

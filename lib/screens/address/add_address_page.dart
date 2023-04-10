@@ -3,13 +3,14 @@ import 'package:ecommerce_int2/screens/address/address_form.dart';
 import 'package:ecommerce_int2/screens/select_card_page.dart';
 import 'package:flutter/material.dart';
 
+import '../main/main_page.dart';
+
 class AddAddressPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget finishButton = InkWell(
-      onTap:()=> Navigator.of(context).push(
-          MaterialPageRoute(
-              builder: (_) => SelectCardPage())),
+      onTap: () => Navigator.of(context)
+          .push(MaterialPageRoute(builder: (_) => MainPage())),
       child: Container(
         height: 80,
         width: MediaQuery.of(context).size.width / 1.5,
@@ -24,7 +25,7 @@ class AddAddressPage extends StatelessWidget {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("Finish",
+          child: Text("Заканчивать",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,
@@ -41,7 +42,7 @@ class AddAddressPage extends StatelessWidget {
         elevation: 0.0,
         iconTheme: IconThemeData(color: darkGrey),
         title: Text(
-          'Add Address',
+          'Добавить адрес',
           style: const TextStyle(
               color: darkGrey,
               fontWeight: FontWeight.w500,
@@ -65,7 +66,7 @@ class AddAddressPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Row(
+                  /*   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Card(
@@ -158,7 +159,7 @@ class AddAddressPage extends StatelessWidget {
                                 ),
                               )))
                     ],
-                  ),
+                  ), */
                   AddAddressForm(),
                   Center(child: finishButton)
                 ],
