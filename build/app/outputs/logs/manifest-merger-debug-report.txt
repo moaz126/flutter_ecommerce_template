@@ -38,7 +38,7 @@ INJECTED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_templ
 INJECTED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\AndroidManifest.xml:1:1-8:12
 INJECTED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\AndroidManifest.xml:1:1-8:12
 	package
-		ADDED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\main\AndroidManifest.xml:2:5-53
+		ADDED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\main\AndroidManifest.xml:2:5-31
 		INJECTED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\AndroidManifest.xml
 	android:versionName

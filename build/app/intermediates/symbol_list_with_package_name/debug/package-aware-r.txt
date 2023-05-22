@@ -1,4 +1,4 @@
-com.example.flutter_ecommerce_template
+com.ecoplast.app
 attr activityAction
 attr activityName
 attr alpha

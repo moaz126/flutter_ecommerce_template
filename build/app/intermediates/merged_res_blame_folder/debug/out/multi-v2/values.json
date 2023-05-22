@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.flutter_ecommerce_template.app-mergeDebugResources-9:/values/values.xml",
+            "outputFile": "com.ecoplast.app-mergeDebugResources-9:/values/values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template-1\\android\\app\\src\\main\\res\\values\\styles.xml",

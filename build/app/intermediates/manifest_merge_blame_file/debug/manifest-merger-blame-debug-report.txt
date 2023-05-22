@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.flutter_ecommerce_template"
+3    package="com.ecoplast.app"
 4    android:versionCode="1"
 5    android:versionName="1.0.1" >
 6
@@ -24,7 +24,7 @@
 21        android:icon="@mipmap/launcher_icon"
 22        android:label="Ecoplast" >
 23        <activity
-24            android:name="com.example.flutter_ecommerce_template.MainActivity"
+24            android:name="com.ecoplast.app.MainActivity"
 25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
 26            android:exported="true"
 27            android:hardwareAccelerated="true"
