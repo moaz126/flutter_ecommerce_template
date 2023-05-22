@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/screens/auth/welcome_back_page.dart';
 import 'package:ecommerce_int2/screens/intro_page.dart';
@@ -14,6 +16,10 @@ class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   late Animation<double> opacity;
   late AnimationController controller;
+  void printWrapped(String text) {
+    final pattern = RegExp('.{1,800}'); // 800 is the size of each chunk
+    pattern.allMatches(text).forEach((match) => print(match.group(0)));
+  }
 
   @override
   void initState() {
@@ -27,6 +33,7 @@ class _SplashScreenState extends State<SplashScreen>
     controller.forward().then((_) {
       navigationPage();
     });
+    // connect();
   }
 
   @override

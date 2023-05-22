@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return GetMaterialApp(
-        title: 'eCommerce int2',
+        title: 'Ecoplast',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           brightness: Brightness.light,
