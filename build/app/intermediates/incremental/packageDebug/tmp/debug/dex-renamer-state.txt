@@ -1,4 +1,10 @@
-#Tue May 23 01:28:22 PKT 2023
+#Mon May 29 23:44:21 PKT 2023
+base.2=C\:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template-1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
+path.2=classes3.dex
+base.1=C\:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template-1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+path.1=classes2.dex
 base.0=C\:\\Users\\moazz\\moaz_files\\flutter projects\\flutter_ecommerce_template-1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

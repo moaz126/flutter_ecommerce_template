@@ -5,7 +5,7 @@
 5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
+8        android:minSdkVersion="19"
 9        android:targetSdkVersion="33" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
@@ -15,59 +15,169 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\AndroidManifest.xml:7:5-66
 15-->C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\AndroidManifest.xml:7:22-64
-16
-17    <application
-18        android:name="android.app.Application"
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.6.0] C:\Users\moazz\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/launcher_icon"
-22        android:label="Ecoplast" >
-23        <activity
-24            android:name="com.ecoplast.app.MainActivity"
-25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-26            android:exported="true"
-27            android:hardwareAccelerated="true"
-28            android:launchMode="singleTop"
-29            android:theme="@style/LaunchTheme"
-30            android:windowSoftInputMode="adjustResize" >
-31
-32            <!--
-33                 Specifies an Android theme to apply to this Activity as soon as
-34                 the Android process has started. This theme is visible to the user
-35                 while the Flutter UI initializes. After that, this theme continues
-36                 to determine the Window background behind the Flutter UI.
-37            -->
-38            <meta-data
-39                android:name="io.flutter.embedding.android.NormalTheme"
-40                android:resource="@style/NormalTheme" />
-41
-42            <intent-filter>
-43                <action android:name="android.intent.action.MAIN" />
+16    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+17    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:24:5-79
+18-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:24:22-76
+19
+20    <application
+21        android:name="android.app.Application"
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.6.0] C:\Users\moazz\.gradle\caches\transforms-3\1141b72fb8be4e566e7814849b1aa3a2\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/launcher_icon"
+25        android:label="Ecoplast" >
+26        <activity
+27            android:name="com.ecoplast.app.MainActivity"
+28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+29            android:exported="true"
+30            android:hardwareAccelerated="true"
+31            android:launchMode="singleTop"
+32            android:theme="@style/LaunchTheme"
+33            android:windowSoftInputMode="adjustResize" >
+34
+35            <!--
+36                 Specifies an Android theme to apply to this Activity as soon as
+37                 the Android process has started. This theme is visible to the user
+38                 while the Flutter UI initializes. After that, this theme continues
+39                 to determine the Window background behind the Flutter UI.
+40            -->
+41            <meta-data
+42                android:name="io.flutter.embedding.android.NormalTheme"
+43                android:resource="@style/NormalTheme" />
 44
-45                <category android:name="android.intent.category.LAUNCHER" />
-46            </intent-filter>
-47        </activity>
-48        <!--
-49             Don't delete the meta-data below.
-50             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-51        -->
-52        <meta-data
-53            android:name="flutterEmbedding"
-54            android:value="2" />
-55
-56        <uses-library
-56-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-57            android:name="androidx.window.extensions"
-57-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-58            android:required="false" />
-58-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-59        <uses-library
-59-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-60            android:name="androidx.window.sidecar"
-60-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-61            android:required="false" />
-61-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-62    </application>
-63
-64</manifest>
+45            <intent-filter>
+46                <action android:name="android.intent.action.MAIN" />
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+49            </intent-filter>
+50        </activity>
+51        <!--
+52             Don't delete the meta-data below.
+53             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+54        -->
+55        <meta-data
+56            android:name="flutterEmbedding"
+57            android:value="2" />
+58
+59        <service
+59-->[:firebase_crashlytics] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+60            android:name="com.google.firebase.components.ComponentDiscoveryService"
+60-->[:firebase_crashlytics] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+61            android:directBootAware="true"
+61-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:34:13-43
+62            android:exported="false" >
+62-->[com.google.firebase:firebase-crashlytics:18.3.7] C:\Users\moazz\.gradle\caches\transforms-3\d704654f5aa9f794495a7d6c60a5ddf3\transformed\jetified-firebase-crashlytics-18.3.7\AndroidManifest.xml:16:13-37
+63            <meta-data
+63-->[:firebase_crashlytics] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+64                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
+64-->[:firebase_crashlytics] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-130
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[:firebase_crashlytics] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+66            <meta-data
+66-->[:cloud_firestore] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+67                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+67-->[:cloud_firestore] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[:cloud_firestore] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+69            <meta-data
+69-->[:firebase_core] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+70                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+70-->[:firebase_core] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[:firebase_core] C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+72            <meta-data
+72-->[com.google.firebase:firebase-crashlytics:18.3.7] C:\Users\moazz\.gradle\caches\transforms-3\d704654f5aa9f794495a7d6c60a5ddf3\transformed\jetified-firebase-crashlytics-18.3.7\AndroidManifest.xml:17:13-19:85
+73                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+73-->[com.google.firebase:firebase-crashlytics:18.3.7] C:\Users\moazz\.gradle\caches\transforms-3\d704654f5aa9f794495a7d6c60a5ddf3\transformed\jetified-firebase-crashlytics-18.3.7\AndroidManifest.xml:18:17-115
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.firebase:firebase-crashlytics:18.3.7] C:\Users\moazz\.gradle\caches\transforms-3\d704654f5aa9f794495a7d6c60a5ddf3\transformed\jetified-firebase-crashlytics-18.3.7\AndroidManifest.xml:19:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-firestore:24.6.0] C:\Users\moazz\.gradle\caches\transforms-3\ec3138adb9fecd309911a980fe7066c1\transformed\jetified-firebase-firestore-24.6.0\AndroidManifest.xml:19:13-21:85
+76                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+76-->[com.google.firebase:firebase-firestore:24.6.0] C:\Users\moazz\.gradle\caches\transforms-3\ec3138adb9fecd309911a980fe7066c1\transformed\jetified-firebase-firestore-24.6.0\AndroidManifest.xml:20:17-111
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-firestore:24.6.0] C:\Users\moazz\.gradle\caches\transforms-3\ec3138adb9fecd309911a980fe7066c1\transformed\jetified-firebase-firestore-24.6.0\AndroidManifest.xml:21:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\moazz\.gradle\caches\transforms-3\c6892a04519549dabf7974bc7e92594e\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+79                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+79-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\moazz\.gradle\caches\transforms-3\c6892a04519549dabf7974bc7e92594e\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\moazz\.gradle\caches\transforms-3\c6892a04519549dabf7974bc7e92594e\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+81        </service>
+82
+83        <uses-library
+83-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+84            android:name="androidx.window.extensions"
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+86        <uses-library
+86-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+87            android:name="androidx.window.sidecar"
+87-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+88            android:required="false" />
+88-->[androidx.window:window:1.0.0-beta04] C:\Users\moazz\.gradle\caches\transforms-3\40ff8c014bc3b03149787e1d45a42dea\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+89
+90        <service
+90-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+91            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+91-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+92            android:exported="false" >
+92-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+93            <meta-data
+93-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+94                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+94-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+95                android:value="cct" />
+95-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\732fa198ca193d7b129217cad757ceaf\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+96        </service>
+97        <service
+97-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+98            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+98-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+99            android:exported="false"
+99-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+100            android:permission="android.permission.BIND_JOB_SERVICE" >
+100-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+101        </service>
+102
+103        <receiver
+103-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+104            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+104-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+105            android:exported="false" />
+105-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\moazz\.gradle\caches\transforms-3\0ddad48c957815b643aea0051753aaee\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+106
+107        <provider
+107-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
+108            android:name="com.google.firebase.provider.FirebaseInitProvider"
+108-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
+109            android:authorities="com.ecoplast.app.firebaseinitprovider"
+109-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
+110            android:directBootAware="true"
+110-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
+111            android:exported="false"
+111-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
+112            android:initOrder="100" />
+112-->[com.google.firebase:firebase-common:20.3.2] C:\Users\moazz\.gradle\caches\transforms-3\026de80ea9d0b63bfc94ec9a10c1d73c\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
+113
+114        <activity
+114-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\moazz\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+115            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+115-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\moazz\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+116            android:exported="false"
+116-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\moazz\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+117            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+117-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\moazz\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+118
+119        <meta-data
+119-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\moazz\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+120            android:name="com.google.android.gms.version"
+120-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\moazz\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+121            android:value="@integer/google_play_services_version" />
+121-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\moazz\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+122    </application>
+123
+124</manifest>

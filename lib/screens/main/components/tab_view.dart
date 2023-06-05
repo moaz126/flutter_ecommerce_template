@@ -73,7 +73,10 @@ class TabView extends StatelessWidget {
                 SizedBox(
                   height: 16.0,
                 ),
-                Flexible(child: RecommendedList()),
+                Flexible(
+                    child: RecommendedList(
+                  category: 'Водопровод',
+                )),
               ],
             ),
           ),
@@ -81,25 +84,46 @@ class TabView extends StatelessWidget {
             SizedBox(
               height: 16.0,
             ),
-            Flexible(child: RecommendedList())
+            Flexible(
+                child: RecommendedList(
+              category: 'Канализация',
+            ))
           ]),
           Column(children: <Widget>[
             SizedBox(
               height: 16.0,
             ),
-            Flexible(child: RecommendedList())
+            Flexible(
+                child: RecommendedList(
+              category: 'Водонагреватели',
+            ))
           ]),
           Column(children: <Widget>[
             SizedBox(
               height: 16.0,
             ),
-            Flexible(child: RecommendedList())
+            Flexible(
+                child: RecommendedList(
+              category: 'Сантехническая мебель',
+            ))
           ]),
           Column(children: <Widget>[
             SizedBox(
               height: 16.0,
             ),
-            Flexible(child: RecommendedList())
+            Flexible(
+                child: RecommendedList(
+              category: 'Санфаянс',
+            ))
+          ]),
+          Column(children: <Widget>[
+            SizedBox(
+              height: 16.0,
+            ),
+            Flexible(
+                child: RecommendedList(
+              category: 'Утеплители для труб',
+            ))
           ]),
         ]);
   }

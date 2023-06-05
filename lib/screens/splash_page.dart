@@ -59,13 +59,19 @@ class _SplashScreenState extends State<SplashScreen>
         child: SafeArea(
           child: new Scaffold(
             body: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Expanded(
+                Center(
                   child: Opacity(
                       opacity: opacity.value,
-                      child: new Image.asset('assets/logo.png')),
+                      child: new Image.asset(
+                        'assets/logobg.png',
+                        height: 160,
+                        width: 160,
+                      )),
                 ),
-                Padding(
+                /*   Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: RichText(
                     text: TextSpan(
@@ -77,7 +83,7 @@ class _SplashScreenState extends State<SplashScreen>
                               style: TextStyle(fontWeight: FontWeight.bold))
                         ]),
                   ),
-                )
+                ) */
               ],
             ),
           ),

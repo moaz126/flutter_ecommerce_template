@@ -32,11 +32,11 @@ class ProductDisplay extends StatelessWidget {
                           blurRadius: 6.0),
                     ]),
                 child: Align(
-                  alignment: Alignment(1, 0),
+                  alignment: Alignment(1.5, 0),
                   child: RichText(
                       text: TextSpan(children: [
                     TextSpan(
-                        text: '\$ ${product.price}',
+                        text: '  \$ ${product.price}',
                         style: const TextStyle(
                             color: const Color(0xFFFFFFFF),
                             fontWeight: FontWeight.w400,
@@ -66,12 +66,19 @@ class ProductDisplay extends StatelessWidget {
                     child: Container(
                       child: Hero(
                         tag: product.image,
-                        child: Image.asset(
-                          product.image,
-                          fit: BoxFit.contain,
-                          height: 230,
-                          width: 230,
-                        ),
+                        child: product.image.contains('https')
+                            ? Image.network(
+                                product.image,
+                                fit: BoxFit.contain,
+                                height: 230,
+                                width: 230,
+                              )
+                            : Image.asset(
+                                product.image,
+                                fit: BoxFit.contain,
+                                height: 230,
+                                width: 230,
+                              ),
                       ),
                     ),
                   )

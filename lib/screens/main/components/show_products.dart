@@ -33,10 +33,15 @@ class ProductWidget extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.asset(
-                product.image,
-                height: 150,
-              ),
+              child: product.image.contains('https')
+                  ? Image.network(
+                      product.image,
+                      height: 150,
+                    )
+                  : Image.asset(
+                      product.image,
+                      height: 150,
+                    ),
             ),
             SizedBox(height: 8),
             Padding(

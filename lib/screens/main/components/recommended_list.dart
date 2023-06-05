@@ -1,64 +1,122 @@
+import 'dart:developer';
+
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/models/product.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommerce_int2/screens/main/components/show_products.dart';
 import 'package:ecommerce_int2/screens/product/product_page.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
 
-class RecommendedList extends StatelessWidget {
-  List<Product> products = [
-    Product('assets/product1.jpg', 'Bag', 'Beautiful bag', 2.33),
-    Product('assets/product2.jpg', 'Cap', 'Cap with beautiful design', 10),
-    Product('assets/category1.png', 'Jeans', 'Jeans for you', 20),
-    Product('assets/category2.png', 'Woman Shoes',
-        'Shoes with special discount', 30),
-    Product('assets/category3.png', 'Bag Express', 'Bag for your shops', 40),
-    Product('assets/category4.png', 'Jeans', 'Beautiful Jeans', 102.33),
-    Product('assets/category5.png', 'Silver Ring', 'Description', 52.33),
-    Product('assets/category6.png', 'Shoes', 'Description', 62.33),
-    Product('assets/product1.jpg', 'Headphones', 'Description', 72.33),
-  ];
+class RecommendedList extends StatefulWidget {
+  final String category;
+
+  const RecommendedList({super.key, required this.category});
+  @override
+  State<RecommendedList> createState() => _RecommendedListState();
+}
+
+class _RecommendedListState extends State<RecommendedList> {
+  bool _loader = false;
+  List<Product> products = [];
+  Future<List<DocumentSnapshot>> fetchProductsByCategory(
+      String categoryId) async {
+    setState(() {
+      _loader = true;
+    });
+    log('check');
+    // Reference to the products collection
+    /*  CollectionReference productsRef =
+        FirebaseFirestore.instance.collection('products');
+
+    // Query products by category
+    QuerySnapshot querySnapshot =
+        await productsRef.where('category', isEqualTo: categoryId).get(); */
+    final productsCollection =
+        FirebaseFirestore.instance.collection('products');
+    final querySnapshot = await productsCollection
+        .where('category', isEqualTo: widget.category)
+        .get();
+    print('asdfasdfasdfasdf');
+    print(querySnapshot.docs.length);
+    querySnapshot.docs.forEach((doc) {
+      // Extract the data from the document snapshot
+      String id = doc.id;
+      String productName = doc['productName'];
+      String productThumbnail = doc['thumbnail'];
+      double productPrice =
+          doc['price'] == '' ? 0.0 : double.parse(doc['price']);
+      String productDetail = doc['productDetail'];
+      List<dynamic> images = doc['images'];
+      String category = doc['category'];
+
+      // Create a Product object and add it to the list
+      Product product = Product(id, productThumbnail, productName,
+          productDetail, productPrice, images, category);
+
+      products.add(product);
+    });
+    log(products.length.toString());
+    print('ho gya' + products.length.toString());
+    // Return the list of product documents
+    setState(() {
+      _loader = false;
+    });
+    return querySnapshot.docs;
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    fetchProductsByCategory('Водопровод');
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        SizedBox(
-          height: 20,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+    return _loader
+        ? Center(
+            child: CircularProgressIndicator(),
+          )
+        : Column(
             children: <Widget>[
-              IntrinsicHeight(
-                child: Container(
-                  margin: const EdgeInsets.only(left: 16.0, right: 8.0),
-                  width: 4,
-                  color: mediumYellow,
+              SizedBox(
+                height: 20,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    IntrinsicHeight(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 16.0, right: 8.0),
+                        width: 4,
+                        color: mediumYellow,
+                      ),
+                    ),
+                    Center(
+                        child: Text(
+                      'Рекомендуемые',
+                      style: TextStyle(
+                          color: darkGrey,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold),
+                    )),
+                  ],
                 ),
               ),
-              Center(
-                  child: Text(
-                'Рекомендуемые',
-                style: TextStyle(
-                    color: darkGrey,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold),
-              )),
-            ],
-          ),
-        ),
-        Flexible(
-          child: Container(
-              padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
-              child: GridView.count(
-                crossAxisCount: 2,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                childAspectRatio: 0.70,
-                padding: EdgeInsets.only(left: 16, right: 16),
-                children: products
-                    .map((product) => ProductWidget(product: product))
-                    .toList(),
-              ) /* MasonryGridView.count(
+              Flexible(
+                child: Container(
+                    padding:
+                        EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 16,
+                      mainAxisSpacing: 16,
+                      childAspectRatio: 0.70,
+                      padding: EdgeInsets.only(left: 16, right: 16),
+                      children: products
+                          .map((product) => ProductWidget(product: product))
+                          .toList(),
+                    ) /* MasonryGridView.count(
               physics: NeverScrollableScrollPhysics(),
               padding: EdgeInsets.zero,
               crossAxisCount: 4,
@@ -88,9 +146,9 @@ class RecommendedList extends StatelessWidget {
               mainAxisSpacing: 4.0,
               crossAxisSpacing: 4.0,
             ), */
+                    ),
               ),
-        ),
-      ],
-    );
+            ],
+          );
   }
 }

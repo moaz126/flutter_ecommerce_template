@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "468148390494",
+    "project_id": "ecoplast-ad48d",
+    "storage_bucket": "ecoplast-ad48d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468148390494:android:a296e33b9f0eeb124842cf",
+        "android_client_info": {
+          "package_name": "com.ecoplast.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxDrFByasB_SBvHbyjDJTfW4oSg_3XY9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468148390494:android:4b22740c6d8e2f744842cf",
+        "android_client_info": {
+          "package_name": "com.ecoplast.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxDrFByasB_SBvHbyjDJTfW4oSg_3XY9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
