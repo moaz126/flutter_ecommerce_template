@@ -45,13 +45,16 @@ class _ShopItemListState extends State<ShopItemList> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(
-                              widget.product.name,
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                                color: darkGrey,
+                            Padding(
+                              padding: const EdgeInsets.only(left: 40.0),
+                              child: Text(
+                                widget.product.name,
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: darkGrey,
+                                ),
                               ),
                             ),
                             Align(
@@ -64,7 +67,6 @@ class _ShopItemListState extends State<ShopItemList> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    ColorOption(Colors.red),
                                     Text(
                                       '\$${widget.product.price}',
                                       textAlign: TextAlign.center,

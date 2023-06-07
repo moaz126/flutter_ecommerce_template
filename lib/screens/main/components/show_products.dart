@@ -48,6 +48,8 @@ class ProductWidget extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Text(
                 product.name,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),

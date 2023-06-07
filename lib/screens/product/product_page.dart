@@ -1,9 +1,11 @@
+import 'package:ecommerce_int2/api_service.dart';
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/models/product.dart';
 import 'package:ecommerce_int2/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../shop/check_out_page.dart';
 import 'components/product_display.dart';
 import 'view_product_page.dart';
 
@@ -20,6 +22,11 @@ class _ProductPageState extends State<ProductPage> {
   final Product product;
 
   _ProductPageState(this.product);
+  @override
+  void initState() {
+    super.initState();
+    print(product.id);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +34,11 @@ class _ProductPageState extends State<ProductPage> {
     double bottomPadding = MediaQuery.of(context).padding.bottom;
 
     Widget viewProductButton = InkWell(
-      onTap: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (_) => ViewProductPage(
-                product: product,
-              ))),
+      onTap: () {
+        cartList.add(widget.product);
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => CheckOutPage()));
+      },
       child: Container(
         height: 80,
         width: width / 1.5,
@@ -45,7 +53,7 @@ class _ProductPageState extends State<ProductPage> {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("Посмотреть продукт",
+          child: Text("Добавить в корзину",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,

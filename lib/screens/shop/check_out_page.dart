@@ -1,4 +1,5 @@
 import 'package:card_swiper/card_swiper.dart';
+import 'package:ecommerce_int2/api_service.dart';
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/models/product.dart';
 import 'package:ecommerce_int2/screens/address/add_address_page.dart';
@@ -114,7 +115,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                             fontSize: 16),
                       ),
                       Text(
-                        products.length.toString() + ' предметы',
+                        cartList.length.toString() + ' предметы',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -128,14 +129,15 @@ class _CheckOutPageState extends State<CheckOutPage> {
                   child: Scrollbar(
                     child: ListView.builder(
                       itemBuilder: (_, index) => ShopItemList(
-                        products[index],
+                        cartList[index],
                         onRemove: () {
+                          print('remvoe');
                           setState(() {
-                            products.remove(products[index]);
+                            cartList.removeAt(index);
                           });
                         },
                       ),
-                      itemCount: products.length,
+                      itemCount: cartList.length,
                     ),
                   ),
                 ),

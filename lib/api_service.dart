@@ -2,7 +2,10 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+import 'models/product.dart';
 import 'models/user.dart';
+
+List<Product> cartList = [];
 
 class ApiService {
   static String url(int nrResults) {

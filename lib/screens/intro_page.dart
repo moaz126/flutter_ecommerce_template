@@ -49,7 +49,8 @@ class _IntroPageState extends State<IntroPage> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 32),
                       child: Text(
-                        'Получите любую вещь онлайн',
+                        '',
+                        /*  'Получите любую вещь онлайн', */
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
@@ -59,14 +60,15 @@ class _IntroPageState extends State<IntroPage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 32, vertical: 16.0),
                       child: Text(
-                        'Вы можете купить все, от цифровых продуктов до аппаратного обеспечения, всего за несколько кликов.',
+                        '',
+                        /*  'Вы можете купить все, от цифровых продуктов до аппаратного обеспечения, всего за несколько кликов.', */
                         textAlign: TextAlign.right,
                         style: TextStyle(color: Colors.grey, fontSize: 12.0),
                       ),
                     ),
                   ],
                 ),
-                Column(
+                /*  Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
@@ -128,6 +130,7 @@ class _IntroPageState extends State<IntroPage> {
                     ),
                   ],
                 ),
+          */
               ],
             ),
             Positioned(
@@ -175,23 +178,19 @@ class _IntroPageState extends State<IntroPage> {
                           opacity: pageIndex != 2 ? 1.0 : 0.0,
                           child: TextButton(
                             child: Text(
-                              'ПРОПУСКАТЬ',
+                              '   ',
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16),
                             ),
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                      builder: (context) => MainPage()));
-                            },
+                            onPressed: () {},
                           ),
                         ),
                         pageIndex != 2
                             ? TextButton(
                                 child: Text(
-                                  'СЛЕДУЮЩИЙ',
+                                  'Дальше',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -199,9 +198,9 @@ class _IntroPageState extends State<IntroPage> {
                                 ),
                                 onPressed: () {
                                   if (!(controller.page == 2.0))
-                                    controller.nextPage(
-                                        duration: Duration(milliseconds: 200),
-                                        curve: Curves.linear);
+                                    Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(
+                                            builder: (context) => MainPage()));
                                 },
                               )
                             : TextButton(
