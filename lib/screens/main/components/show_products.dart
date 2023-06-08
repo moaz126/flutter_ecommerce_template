@@ -43,7 +43,7 @@ class ProductWidget extends StatelessWidget {
                       height: 150,
                     ),
             ),
-            SizedBox(height: 8),
+            Spacer(),
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Text(
@@ -60,6 +60,9 @@ class ProductWidget extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10.0, right: 10),
               child: Text('\$${product.price}'),
             ),
+            SizedBox(
+              height: 5,
+            )
           ],
         ),
       ),

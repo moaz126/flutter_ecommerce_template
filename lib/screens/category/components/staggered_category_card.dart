@@ -84,7 +84,9 @@ class CategoryCard extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(() => CategoryProducts());
+                  Get.to(() => CategoryProducts(
+                        categoryName: categoryName,
+                      ));
                 },
                 child: Container(
                   decoration: BoxDecoration(

@@ -105,13 +105,13 @@ class _RecommendedListState extends State<RecommendedList> {
               ),
               Flexible(
                 child: Container(
-                    padding:
-                        EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
+                    padding: EdgeInsets.only(
+                        top: 16.0, right: 16.0, left: 16.0, bottom: 10),
                     child: GridView.count(
                       crossAxisCount: 2,
                       crossAxisSpacing: 16,
                       mainAxisSpacing: 16,
-                      childAspectRatio: 0.70,
+                      childAspectRatio: 0.64,
                       padding: EdgeInsets.only(left: 16, right: 16),
                       children: products
                           .map((product) => ProductWidget(product: product))
