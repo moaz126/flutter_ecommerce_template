@@ -1,5 +1,8 @@
 import 'package:ecommerce_int2/app_properties.dart';
+import 'package:ecommerce_int2/services/global_variable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../constant/colors.dart';
 import 'confirm_otp_page.dart';
@@ -10,10 +13,73 @@ class ForgotPasswordPage extends StatefulWidget {
 }
 
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
-  TextEditingController phoneNumber = TextEditingController(text: '46834683');
+  TextEditingController phoneController = TextEditingController();
 
   GlobalKey prefixKey = GlobalKey();
   double prefixWidth = 0;
+
+  TextEditingController _codeController = TextEditingController();
+
+  Future<void> loginUser(String phone, BuildContext context) async {
+    FirebaseAuth _auth = FirebaseAuth.instance;
+
+    _auth.verifyPhoneNumber(
+      phoneNumber: phone,
+      timeout: Duration(seconds: 60),
+      verificationCompleted: (AuthCredential credential) async {
+        Navigator.of(context).pop();
+
+        //This callback would gets called when verification is done auto maticlly
+      },
+      verificationFailed: (exception) {
+        print(exception);
+      },
+      codeSent: (String verificationId, int? resendToken) {
+        showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (context) {
+              return AlertDialog(
+                title: Text("Give the code?"),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    TextField(
+                      controller: _codeController,
+                    ),
+                  ],
+                ),
+                actions: <Widget>[
+                  TextButton(
+                    child: Text("Confirm"),
+                    onPressed: () async {
+                      final code = _codeController.text.trim();
+                      AuthCredential credential = PhoneAuthProvider.credential(
+                          verificationId: verificationId, smsCode: code);
+                    },
+                  )
+                ],
+              );
+            });
+      },
+      codeAutoRetrievalTimeout: (String verificationId) {
+        // The verification code auto-retrieval timed out.
+        // Handle the case if the user did not receive the verification code.
+      },
+    );
+  }
+
+  void sendPasswordResetEmail(String email) async {
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+      print('Password reset email sent successfully.');
+      customToast('Письмо для сброса пароля успешно отправлено.');
+      Get.back();
+    } catch (error) {
+      print('Error sending password reset email: $error');
+      customToast(error.toString());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +121,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       left: MediaQuery.of(context).size.width / 4,
       bottom: 40,
       child: InkWell(
-        onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (_) => ConfirmOtpPage()));
+        onTap: () async {
+          await loginUser(phoneController.text, context);
+          /* Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ConfirmOtpPage())); */
+          // sendPasswordResetEmail(phoneController.text);
         },
         child: Container(
           width: MediaQuery.of(context).size.width / 2,
@@ -110,9 +178,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: TextField(
-                      controller: phoneNumber,
+                      controller: phoneController,
                       style: TextStyle(fontSize: 16.0),
                       keyboardType: TextInputType.phone,
+                      decoration: InputDecoration(hintText: '+12345678'),
                     ),
                   ),
                 ),
@@ -179,7 +248,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       Spacer(flex: 2),
                       phoneForm,
                       Spacer(flex: 2),
-                      resendAgainText
+                      /* resendAgainText */
                     ],
                   ),
                 )

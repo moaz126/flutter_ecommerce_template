@@ -1,10 +1,16 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:ecommerce_int2/api_service.dart';
 import 'package:ecommerce_int2/app_properties.dart';
+import 'package:ecommerce_int2/models/loging.dart';
 import 'package:ecommerce_int2/models/product.dart';
 import 'package:ecommerce_int2/screens/address/add_address_page.dart';
+import 'package:ecommerce_int2/screens/auth/register_page.dart';
+import 'package:ecommerce_int2/screens/auth/welcome_back_page.dart';
 import 'package:ecommerce_int2/screens/payment/unpaid_page.dart';
+import 'package:ecommerce_int2/services/global_variable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'components/credit_card.dart';
 import 'components/shop_item_list.dart';
@@ -17,38 +23,22 @@ class CheckOutPage extends StatefulWidget {
 class _CheckOutPageState extends State<CheckOutPage> {
   SwiperController swiperController = SwiperController();
 
-  List<Product> products = [
-    Product(
-        '1',
-        'assets/headphones.png',
-        'Boat roackerz 400 On-Ear Bluetooth Headphones',
-        'description',
-        45.3,
-        [],
-        'abc'),
-    Product(
-        '1',
-        'assets/headphones_2.png',
-        'Boat roackerz 100 On-Ear Bluetooth Headphones',
-        'description',
-        22.3,
-        [],
-        'abc'),
-    Product(
-        '1',
-        'assets/headphones_3.png',
-        'Boat roackerz 300 On-Ear Bluetooth Headphones',
-        'description',
-        58.3,
-        [],
-        'abc')
-  ];
-
   @override
   Widget build(BuildContext context) {
     Widget checkOutButton = InkWell(
-      onTap: () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (_) => AddAddressPage())),
+      onTap: () async {
+        if (cartList.isNotEmpty) {
+          if (FirebaseAuth.instance.currentUser == null) {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => WelcomeBackPage()));
+          } else {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => AddAddressPage()));
+          }
+        } else {
+          customToast('Корзина пуста');
+        }
+      },
       child: Container(
         height: 80,
         width: MediaQuery.of(context).size.width / 1.5,

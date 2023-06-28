@@ -1,6 +1,14 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/material.dart';
 
+TextEditingController nameController = TextEditingController();
+
+TextEditingController phoneController = TextEditingController();
+
+TextEditingController addressController = TextEditingController();
+
+TextEditingController commentController = TextEditingController();
+
 class AddAddressForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,6 +27,7 @@ class AddAddressForm extends StatelessWidget {
               color: Colors.white,
             ),
             child: TextField(
+              controller: nameController,
               decoration: InputDecoration(
                   border: InputBorder.none, hintText: 'Ваше имя'),
             ),
@@ -33,6 +42,7 @@ class AddAddressForm extends StatelessWidget {
               color: Colors.white,
             ),
             child: TextField(
+              controller: phoneController,
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                   border: InputBorder.none, hintText: 'Номер телефона'),
@@ -48,6 +58,7 @@ class AddAddressForm extends StatelessWidget {
               color: Colors.white,
             ),
             child: TextField(
+              controller: addressController,
               decoration: InputDecoration(
                   border: InputBorder.none, hintText: 'Адрес доставки'),
             ),
@@ -62,6 +73,7 @@ class AddAddressForm extends StatelessWidget {
               color: Colors.white,
             ),
             child: TextField(
+              controller: commentController,
               maxLines: 5,
               decoration: InputDecoration(
                   border: InputBorder.none, hintText: 'Любые комментарии'),

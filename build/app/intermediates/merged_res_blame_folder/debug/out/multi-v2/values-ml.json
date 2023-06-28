@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ecoplast.app-mergeDebugResources-13:/values-ml/values-ml.xml",
+            "outputFile": "com.ecoplast.app-mergeDebugResources-14:/values-ml/values-ml.xml",
             "map": [
                 {
                     "source": "C:\\Users\\moazz\\.gradle\\caches\\transforms-3\\ad3fb7e0e58165c0e3c87f8f0d79631f\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-ml\\values.xml",
@@ -30,11 +30,28 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "20",
+                        "startLines": "24",
                         "startColumns": "4",
-                        "startOffsets": "2416",
+                        "startOffsets": "2843",
                         "endColumns": "100",
-                        "endOffsets": "2512"
+                        "endOffsets": "2939"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\moazz\\.gradle\\caches\\transforms-3\\c1463af6cb467bf02a2c891016443d37\\transformed\\browser-1.4.0\\res\\values-ml\\values-ml.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,164,267,378",
+                        "endColumns": "108,102,110,103",
+                        "endOffsets": "159,262,373,477"
+                    },
+                    "to": {
+                        "startLines": "20,21,22,23",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2416,2525,2628,2739",
+                        "endColumns": "108,102,110,103",
+                        "endOffsets": "2520,2623,2734,2838"
                     }
                 },
                 {

@@ -5,6 +5,7 @@ import 'package:ecommerce_int2/screens/settings/change_country.dart';
 import 'package:ecommerce_int2/screens/settings/change_password_page.dart';
 import 'package:ecommerce_int2/screens/settings/legal_about_page.dart';
 import 'package:ecommerce_int2/screens/settings/notifications_settings_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'change_language_page.dart';
@@ -109,9 +110,12 @@ class SettingsPage extends StatelessWidget {
                             ListTile(
                               title: Text('выход'),
                               leading: Image.asset('assets/icons/sign_out.png'),
-                              onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (_) => WelcomeBackPage())),
+                              onTap: () {
+                                FirebaseAuth.instance.signOut();
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (_) => WelcomeBackPage()));
+                              },
                             ),
                           ],
                         ),

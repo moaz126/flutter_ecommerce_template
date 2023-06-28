@@ -1,16 +1,55 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/screens/address/address_form.dart';
-import 'package:ecommerce_int2/screens/select_card_page.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../main/main_page.dart';
+import '../../api_service.dart';
+import '../../models/product.dart';
 
 class AddAddressPage extends StatelessWidget {
+  void sendEmail(String email, List<Product> cartProducts) async {
+    final subject = 'Cart Product Data';
+    final body = await generateEmailBody(cartProducts);
+
+    final Uri uri = Uri(
+      scheme: 'mailto',
+      path: email,
+      queryParameters: {
+        'subject': subject.replaceAll('+', ' '),
+        'body': body.replaceAll('+', ' '),
+      },
+    );
+    print(uri);
+
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $uri');
+    }
+  }
+
+  String generateEmailBody(List<Product> cartProducts) {
+    // Generate the body of the email with cart product data
+    // You can format it based on your requirements
+    String body = '';
+    body += 'Name ' + nameController.text + '\n';
+    body += 'phone number ' + phoneController.text + '\n';
+    body += 'address ' + addressController.text + '\n';
+    body += 'comment ' + commentController.text + '\n\n';
+    body += 'Product Data:\n\n';
+    for (int i = 0; i < cartProducts.length; i++) {
+      final product = cartProducts[i];
+      final item = '${i + 1}. ${product.name}: \$${product.price}\n';
+      body += item;
+    }
+
+    return body;
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget finishButton = InkWell(
-      onTap: () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (_) => MainPage())),
+      onTap: () {
+        sendEmail('zeezfit@gmail.com', cartList);
+      },
       child: Container(
         height: 80,
         width: MediaQuery.of(context).size.width / 1.5,

@@ -1,6 +1,10 @@
 import 'package:ecommerce_int2/app_properties.dart';
+import 'package:ecommerce_int2/screens/auth/welcome_back_page.dart';
+import 'package:ecommerce_int2/services/global_variable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ChangePasswordPage extends StatefulWidget {
   @override
@@ -8,13 +12,57 @@ class ChangePasswordPage extends StatefulWidget {
 }
 
 class _ChangePasswordPageState extends State<ChangePasswordPage> {
+  TextEditingController oldPasswordController = TextEditingController();
+
+  TextEditingController newPasswordController = TextEditingController();
+
+  TextEditingController repeatPasswordController = TextEditingController();
+
+  Future<void> changePasswordWithValidation(
+      String oldPassword, String newPassword) async {
+    User? user = FirebaseAuth.instance.currentUser;
+
+    if (user != null) {
+      try {
+        // Create a credential with the old password
+        AuthCredential credential = EmailAuthProvider.credential(
+          email: user.email!,
+          password: oldPassword,
+        );
+
+        // Reauthenticate the user with the credential
+        await user.reauthenticateWithCredential(credential);
+
+        // If reauthentication is successful, update the password
+        await user.updatePassword(newPassword);
+        print('Password changed successfully.');
+        customToast('Пароль успешно изменен.');
+        Get.back();
+      } catch (error) {
+        print('Error changing password: $error');
+        customToast(error.toString());
+        // Handle specific error codes here if needed
+      }
+    } else {
+      customToast('Пожалуйста, войдите сначала');
+      Get.to(WelcomeBackPage());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double bottomPadding = MediaQuery.of(context).padding.bottom;
 
     Widget changePasswordButton = InkWell(
-      onTap: () {},
+      onTap: () {
+        if (newPasswordController.text == repeatPasswordController.text) {
+          changePasswordWithValidation(
+              oldPasswordController.text, newPasswordController.text);
+        } else {
+          customToast('Пароль не подходит');
+        }
+      },
       child: Container(
         height: 80,
         width: width / 1.5,
@@ -94,6 +142,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(5))),
                               child: TextField(
+                                controller: oldPasswordController,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: 'Существующий пароль',
@@ -115,6 +164,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(5))),
                               child: TextField(
+                                controller: newPasswordController,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: 'Новый пароль',
@@ -136,6 +186,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(5))),
                               child: TextField(
+                                controller: repeatPasswordController,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: 'Введите пароль еще раз',

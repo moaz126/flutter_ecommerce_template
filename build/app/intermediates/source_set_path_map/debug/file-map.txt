@@ -4,16 +4,20 @@ com.ecoplast.app-jetified-window-1.0.0-beta04-2 C:\Users\moazz\.gradle\caches\tr
 com.ecoplast.app-jetified-play-services-base-18.0.1-3 C:\Users\moazz\.gradle\caches\transforms-3\8f31701e663a8c1514b353cc4d7239a2\transformed\jetified-play-services-base-18.0.1\res
 com.ecoplast.app-jetified-annotation-experimental-1.1.0-4 C:\Users\moazz\.gradle\caches\transforms-3\a6362f1fb79a6245a27920bb99ff99c3\transformed\jetified-annotation-experimental-1.1.0\res
 com.ecoplast.app-jetified-play-services-basement-18.1.0-5 C:\Users\moazz\.gradle\caches\transforms-3\ad3fb7e0e58165c0e3c87f8f0d79631f\transformed\jetified-play-services-basement-18.1.0\res
-com.ecoplast.app-jetified-window-java-1.0.0-beta04-6 C:\Users\moazz\.gradle\caches\transforms-3\ed438543a8e9ffa856a2b095c92f0ea3\transformed\jetified-window-java-1.0.0-beta04\res
-com.ecoplast.app-debug-7 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\res
-com.ecoplast.app-main-8 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\main\res
-com.ecoplast.app-google-services-9 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\google-services\debug
-com.ecoplast.app-pngs-10 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\pngs\debug
-com.ecoplast.app-resValues-11 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\resValues\debug
-com.ecoplast.app-rs-12 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\rs\debug
-com.ecoplast.app-mergeDebugResources-13 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.ecoplast.app-mergeDebugResources-14 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.ecoplast.app-merged_res-15 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\intermediates\merged_res\debug
-com.ecoplast.app-packaged_res-16 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\cloud_firestore\intermediates\packaged_res\debug
-com.ecoplast.app-packaged_res-17 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_core\intermediates\packaged_res\debug
-com.ecoplast.app-packaged_res-18 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\packaged_res\debug
+com.ecoplast.app-browser-1.4.0-6 C:\Users\moazz\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\res
+com.ecoplast.app-jetified-window-java-1.0.0-beta04-7 C:\Users\moazz\.gradle\caches\transforms-3\ed438543a8e9ffa856a2b095c92f0ea3\transformed\jetified-window-java-1.0.0-beta04\res
+com.ecoplast.app-debug-8 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\debug\res
+com.ecoplast.app-main-9 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\android\app\src\main\res
+com.ecoplast.app-google-services-10 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\google-services\debug
+com.ecoplast.app-pngs-11 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\pngs\debug
+com.ecoplast.app-resValues-12 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\resValues\debug
+com.ecoplast.app-rs-13 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\generated\res\rs\debug
+com.ecoplast.app-mergeDebugResources-14 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.ecoplast.app-mergeDebugResources-15 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.ecoplast.app-merged_res-16 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\app\intermediates\merged_res\debug
+com.ecoplast.app-packaged_res-17 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\cloud_firestore\intermediates\packaged_res\debug
+com.ecoplast.app-packaged_res-18 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_auth\intermediates\packaged_res\debug
+com.ecoplast.app-packaged_res-19 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_core\intermediates\packaged_res\debug
+com.ecoplast.app-packaged_res-20 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\firebase_crashlytics\intermediates\packaged_res\debug
+com.ecoplast.app-packaged_res-21 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\fluttertoast\intermediates\packaged_res\debug
+com.ecoplast.app-packaged_res-22 C:\Users\moazz\moaz_files\flutter projects\flutter_ecommerce_template-1\build\url_launcher_android\intermediates\packaged_res\debug
