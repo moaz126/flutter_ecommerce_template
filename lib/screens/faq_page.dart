@@ -43,7 +43,7 @@ class _FaqPageState extends State<FaqPage> {
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
-        brightness: Brightness.light,
+        // brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         title: Text(
           'Settings',

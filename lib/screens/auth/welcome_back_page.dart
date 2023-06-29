@@ -64,7 +64,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
             builder: (context) {
               _codeController.clear();
               return AlertDialog(
-                title: Text("Give the code?"),
+                title: Text("Дайте код?"),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -75,7 +75,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
                 ),
                 actions: <Widget>[
                   TextButton(
-                    child: Text("Confirm"),
+                    child: Text("Подтверждать"),
                     onPressed: () async {
                       try {
                         AuthCredential credential =

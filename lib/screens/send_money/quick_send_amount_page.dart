@@ -55,7 +55,7 @@ class QuickSendAmountPage extends StatelessWidget {
               },
             )
           ],
-          brightness: Brightness.light,
+          // brightness: Brightness.light,
           backgroundColor: Colors.transparent,
           title: Text(
             'Send Amount',

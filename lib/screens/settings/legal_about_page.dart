@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +17,7 @@ class _LegalAboutPageState extends State<LegalAboutPage> {
         iconTheme: IconThemeData(
             color: Colors.black,
           ),
-        brightness: Brightness.light,
+        // brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         title: Text(
           'Settings',

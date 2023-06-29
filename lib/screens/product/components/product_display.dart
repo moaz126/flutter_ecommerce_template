@@ -19,7 +19,7 @@ class ProductDisplay extends StatelessWidget {
             child: Container(
                 width: MediaQuery.of(context).size.width / 1.5,
                 height: 85,
-                padding: EdgeInsets.only(right: 24),
+                padding: EdgeInsets.only(right: 10),
                 decoration: new BoxDecoration(
                     color: darkGrey,
                     borderRadius: BorderRadius.only(
@@ -31,25 +31,32 @@ class ProductDisplay extends StatelessWidget {
                           offset: Offset(0, 3),
                           blurRadius: 6.0),
                     ]),
-                child: Align(
-                  alignment: Alignment(1.5, 0),
-                  child: RichText(
-                      text: TextSpan(children: [
-                    TextSpan(
-                        text: '  \$ ${product.price}',
-                        style: const TextStyle(
-                            color: const Color(0xFFFFFFFF),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Montserrat",
-                            fontSize: 36.0)),
-                    TextSpan(
-                        text: '.58',
-                        style: const TextStyle(
-                            color: const Color(0xFFFFFFFF),
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Montserrat",
-                            fontSize: 18.0))
-                  ])),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Image.asset(
+                      'assets/icons/currency.png',
+                      color: Colors.white,
+                      height: 35,
+                    ),
+                    RichText(
+                        text: TextSpan(children: [
+                      TextSpan(
+                          text: ' ${product.price}',
+                          style: const TextStyle(
+                              color: const Color(0xFFFFFFFF),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Montserrat",
+                              fontSize: 36.0)),
+                      /* TextSpan(
+                          text: '.58',
+                          style: const TextStyle(
+                              color: const Color(0xFFFFFFFF),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Montserrat",
+                              fontSize: 18.0)) */
+                    ])),
+                  ],
                 ))),
         Align(
           alignment: Alignment(-1, 0),

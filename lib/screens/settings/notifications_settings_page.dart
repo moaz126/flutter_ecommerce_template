@@ -49,7 +49,7 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
         iconTheme: IconThemeData(
             color: Colors.black,
           ),
-        brightness: Brightness.light,
+        // brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         title: Text(
           'Settings',

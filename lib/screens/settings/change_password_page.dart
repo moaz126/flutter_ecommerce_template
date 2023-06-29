@@ -94,7 +94,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
-        brightness: Brightness.light,
+        // brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         title: Text(
           'Настройки',

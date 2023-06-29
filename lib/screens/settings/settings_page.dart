@@ -1,14 +1,9 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/custom_background.dart';
 import 'package:ecommerce_int2/screens/auth/welcome_back_page.dart';
-import 'package:ecommerce_int2/screens/settings/change_country.dart';
 import 'package:ecommerce_int2/screens/settings/change_password_page.dart';
-import 'package:ecommerce_int2/screens/settings/legal_about_page.dart';
-import 'package:ecommerce_int2/screens/settings/notifications_settings_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import 'change_language_page.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -20,7 +15,7 @@ class SettingsPage extends StatelessWidget {
           iconTheme: IconThemeData(
             color: Colors.black,
           ),
-          brightness: Brightness.light,
+          // brightness: Brightness.light,
           backgroundColor: Colors.transparent,
           title: Text(
             'Настройки',
@@ -41,7 +36,7 @@ class SettingsPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Padding(
+                            /*  Padding(
                               padding: const EdgeInsets.only(bottom: 8.0),
                               child: Text(
                                 'Общий',
@@ -50,7 +45,7 @@ class SettingsPage extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18.0),
                               ),
-                            ),
+                            ), */
                             /*  ListTile(
                               title: Text('Язык A / का'),
                               leading: Image.asset('assets/icons/language.png'),
@@ -83,11 +78,11 @@ class SettingsPage extends StatelessWidget {
                                       builder: (_) => LegalAboutPage())),
                             ),
                             */
-                            ListTile(
+                            /* ListTile(
                               title: Text('О нас'),
                               leading: Image.asset('assets/icons/about_us.png'),
                               onTap: () {},
-                            ),
+                            ), */
                             Padding(
                               padding:
                                   const EdgeInsets.only(top: 8.0, bottom: 8.0),

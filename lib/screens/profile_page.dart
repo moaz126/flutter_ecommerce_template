@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
                 EdgeInsets.only(left: 16.0, right: 16.0, top: kToolbarHeight),
             child: Column(
               children: <Widget>[
-                CircleAvatar(
+                /* CircleAvatar(
                   maxRadius: 48,
                   backgroundImage: AssetImage('assets/background.jpg'),
                 ),
@@ -25,7 +25,7 @@ class ProfilePage extends StatelessWidget {
                     'Rose Helbert',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                ),
+                ), */
                 /* Container(
                   margin: EdgeInsets.symmetric(vertical: 16.0),
                   decoration: BoxDecoration(

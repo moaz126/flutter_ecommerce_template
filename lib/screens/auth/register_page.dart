@@ -69,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
             builder: (context) {
               _codeController.clear();
               return AlertDialog(
-                title: Text("Give the code?"),
+                title: Text("Дайте код?"),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -80,7 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 actions: <Widget>[
                   TextButton(
-                    child: Text("Confirm"),
+                    child: Text("Подтверждать"),
                     onPressed: () async {
                       try {
                         AuthCredential credential =
@@ -190,7 +190,7 @@ class _RegisterPageState extends State<RegisterPage> {
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
           child: Center(
-              child: new Text("регистр",
+              child: new Text("Регистрация",
                   style: const TextStyle(
                       color: const Color(0xfffefefe),
                       fontWeight: FontWeight.w600,
