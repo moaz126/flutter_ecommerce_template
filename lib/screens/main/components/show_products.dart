@@ -58,7 +58,16 @@ class ProductWidget extends StatelessWidget {
             SizedBox(height: 4),
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10),
-              child: Text('\$${product.price}'),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/icons/currency.png',
+                    color: Colors.black,
+                    height: 15,
+                  ),
+                  Text(' ${product.price}'),
+                ],
+              ),
             ),
             SizedBox(
               height: 5,

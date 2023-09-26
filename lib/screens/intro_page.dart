@@ -139,7 +139,7 @@ class _IntroPageState extends State<IntroPage> {
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: <Widget>[
-                    Row(
+                    /*  Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
@@ -170,7 +170,7 @@ class _IntroPageState extends State<IntroPage> {
                               color: pageIndex == 2 ? yellow : Colors.white),
                         )
                       ],
-                    ),
+                    ), */
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[

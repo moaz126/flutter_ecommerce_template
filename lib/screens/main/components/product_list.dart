@@ -143,6 +143,7 @@ class ProductCard extends StatelessWidget {
                     Align(
                       alignment: Alignment.topRight,
                       child: Container(
+                        width: 70,
                         margin: const EdgeInsets.only(bottom: 12.0),
                         padding: const EdgeInsets.fromLTRB(8.0, 4.0, 12.0, 4.0),
                         decoration: BoxDecoration(
@@ -151,12 +152,21 @@ class ProductCard extends StatelessWidget {
                               bottomLeft: Radius.circular(10)),
                           color: Color.fromRGBO(224, 69, 10, 1),
                         ),
-                        child: Text(
-                          '\$${product.price}',
-                          style: TextStyle(
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/icons/currency.png',
                               color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
+                              height: 15,
+                            ),
+                            Text(
+                              ' ${product.price}',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
                       ),
                     ),

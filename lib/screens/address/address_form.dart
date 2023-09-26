@@ -9,6 +9,8 @@ TextEditingController addressController = TextEditingController();
 
 TextEditingController commentController = TextEditingController();
 
+TextEditingController emailController = TextEditingController();
+
 class AddAddressForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,22 @@ class AddAddressForm extends StatelessWidget {
               controller: nameController,
               decoration: InputDecoration(
                   border: InputBorder.none, hintText: 'Ваше имя'),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+              color: Colors.white,
+            ),
+            child: TextField(
+              controller: emailController,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                  border: InputBorder.none, hintText: 'example@gmail.com'),
             ),
           ),
           SizedBox(

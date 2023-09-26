@@ -1,13 +1,55 @@
+import 'dart:convert';
+
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/screens/address/address_form.dart';
+import 'package:ecommerce_int2/services/global_variable.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'package:http/http.dart' as http;
 import '../../api_service.dart';
 import '../../models/product.dart';
+import '../main/main_page.dart';
 
 class AddAddressPage extends StatelessWidget {
-  void sendEmail(String email, List<Product> cartProducts) async {
+  Future<void> sendEmailapi(context) async {
+    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+    // final apiKey = 'YOUR_API_KEY'; // Replace with your EmailJS API key
+    String message = await generateEmailBody(cartList);
+    Map<String, dynamic> body = {
+      'service_id': 'service_rndiofn', // Replace with your EmailJS service ID
+      'template_id':
+          'template_mzejob3', // Replace with your EmailJS template ID
+      'user_id': 'J6E53aVlt-IKNhurQ', // Replace with your EmailJS user ID
+      'accessToken': 'qyEo_yQ8qknX2OZe-jn7H',
+      'template_params': {
+        "from_name": "Moaz",
+        "to_name": "ecoplast",
+        "message": message,
+        "reply_to": emailController.text
+      }, // Replace with your template parameters
+    };
+    final response = await http.post(url,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode(body));
+    print(response.body);
+    if (response.statusCode == 200) {
+      customToast('Письмо успешно отправлено!');
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => MainPage()),
+        (Route<dynamic> route) => false,
+      );
+      print('Email sent successfully!');
+    } else {
+      customToast(
+          'Не удалось отправить электронное письмо. Ошибка: ${response.body}');
+      print('Failed to send email. Error: ${response.body}');
+    }
+  }
+
+  void sendEmail1(String email, List<Product> cartProducts) async {
     final subject = 'Cart Product Data';
     final body = await generateEmailBody(cartProducts);
 
@@ -48,7 +90,14 @@ class AddAddressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget finishButton = InkWell(
       onTap: () {
-        sendEmail('zeezfit@gmail.com', cartList);
+        // sendEmail('zeezfit@gmail.com', cartList);
+        if (emailController.text.isNotEmpty &&
+            phoneController.text.isNotEmpty) {
+          sendEmailapi(context);
+        } else {
+          customToast(
+              'Пожалуйста, добавьте адрес электронной почты и номер телефона');
+        }
       },
       child: Container(
         height: 80,

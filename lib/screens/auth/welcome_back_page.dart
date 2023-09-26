@@ -308,7 +308,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Spacer(flex: 3),
-                welcomeBack,
+                // welcomeBack,
                 Spacer(),
                 subTitle,
                 Spacer(flex: 2),
