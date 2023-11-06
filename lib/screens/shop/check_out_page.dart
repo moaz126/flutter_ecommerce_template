@@ -1,18 +1,12 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:ecommerce_int2/api_service.dart';
 import 'package:ecommerce_int2/app_properties.dart';
-import 'package:ecommerce_int2/models/loging.dart';
-import 'package:ecommerce_int2/models/product.dart';
 import 'package:ecommerce_int2/screens/address/add_address_page.dart';
-import 'package:ecommerce_int2/screens/auth/register_page.dart';
 import 'package:ecommerce_int2/screens/auth/welcome_back_page.dart';
-import 'package:ecommerce_int2/screens/payment/unpaid_page.dart';
 import 'package:ecommerce_int2/services/global_variable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import 'components/credit_card.dart';
+import 'package:get/get.dart';
 import 'components/shop_item_list.dart';
 
 class CheckOutPage extends StatefulWidget {
@@ -115,7 +109,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 300,
+                  height: Get.height * 0.65,
                   child: Scrollbar(
                     child: ListView.builder(
                       itemBuilder: (_, index) => ShopItemList(

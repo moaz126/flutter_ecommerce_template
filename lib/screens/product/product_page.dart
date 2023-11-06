@@ -113,7 +113,7 @@ class _ProductPageState extends State<ProductPage> {
                 SizedBox(
                   height: 24.0,
                 ),
-                Padding(
+                /*  Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Row(
                     children: <Widget>[
@@ -138,6 +138,7 @@ class _ProductPageState extends State<ProductPage> {
                     ],
                   ),
                 ),
+                */
                 SizedBox(
                   height: 16.0,
                 ),

@@ -94,20 +94,20 @@ class ProductDisplay extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          left: 20.0,
-          bottom: 0.0,
-          child: RawMaterialButton(
-            onPressed: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => RatingPage())),
-            constraints: const BoxConstraints(minWidth: 45, minHeight: 45),
-            child:
-                Icon(Icons.favorite, color: Color.fromRGBO(255, 137, 147, 1)),
-            elevation: 0.0,
-            shape: CircleBorder(),
-            fillColor: Color.fromRGBO(255, 255, 255, 0.4),
-          ),
-        )
+        // Positioned(
+        //   left: 20.0,
+        //   bottom: 0.0,
+        //   child: RawMaterialButton(
+        //     onPressed: () => Navigator.of(context)
+        //         .push(MaterialPageRoute(builder: (_) => RatingPage())),
+        //     constraints: const BoxConstraints(minWidth: 45, minHeight: 45),
+        //     child:
+        //         Icon(Icons.favorite, color: Color.fromRGBO(255, 137, 147, 1)),
+        //     elevation: 0.0,
+        //     shape: CircleBorder(),
+        //     fillColor: Color.fromRGBO(255, 255, 255, 0.4),
+        //   ),
+        // )
       ],
     );
   }
