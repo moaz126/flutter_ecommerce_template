@@ -1,4 +1,4 @@
-package com.ecoplast.app
+package com.ecoplast_products.app
 
 import io.flutter.embedding.android.FlutterActivity
 

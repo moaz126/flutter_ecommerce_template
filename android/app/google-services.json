@@ -43,6 +43,43 @@
       },
       "oauth_client": [
         {
+          "client_id": "468148390494-ukgu7d3979v2gri09qpglk0nble2no1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ecoplast.app",
+            "certificate_hash": "c48b33b10d489db0eae5379af2b83f6ff2cd2302"
+          }
+        },
+        {
+          "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxDrFByasB_SBvHbyjDJTfW4oSg_3XY9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468148390494:android:e87c076e402147294842cf",
+        "android_client_info": {
+          "package_name": "com.ecoplast_products.app"
+        }
+      },
+      "oauth_client": [
+        {
           "client_id": "468148390494-css5ei2e9ibpaaa3npbd6r3le92dq8ad.apps.googleusercontent.com",
           "client_type": 3
         }
