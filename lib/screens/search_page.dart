@@ -1,9 +1,13 @@
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/models/product.dart';
+import 'package:ecommerce_int2/screens/main/components/recommended_list.dart';
+import 'package:ecommerce_int2/screens/product/components/product_display.dart';
 import 'package:ecommerce_int2/screens/product/view_product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rubber/rubber.dart';
+
+import 'product/product_page.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -74,6 +78,9 @@ class _SearchPageState extends State<SearchPage>
 
   @override
   void initState() {
+    products = searchProducts;
+    print('object');
+    print(products.length);
     _controller = RubberAnimationController(
         vsync: this,
         halfBoundValue: AnimationControllerValue(percentage: 0.4),
@@ -86,10 +93,6 @@ class _SearchPageState extends State<SearchPage>
   @override
   void dispose() {
     super.dispose();
-  }
-
-  void _expand() {
-    _controller.expand();
   }
 
   Widget _getLowerLayer() {
@@ -172,7 +175,7 @@ class _SearchPageState extends State<SearchPage>
                       child: ListTile(
                         onTap: () =>
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_) => ViewProductPage(
+                                builder: (_) => ProductPage(
                                       product: searchResults[index],
                                     ))),
                         title: Text(searchResults[index].name),
@@ -346,7 +349,7 @@ class _SearchPageState extends State<SearchPage>
 //          ),
             body: RubberBottomSheet(
           lowerLayer: _getLowerLayer(), // The underlying page (Widget)
-          upperLayer: _getUpperLayer(), // The bottomsheet content (Widget)
+          upperLayer: Container(), // The bottomsheet content (Widget)
           animationController: _controller, // The one we created earlier
         )),
       ),

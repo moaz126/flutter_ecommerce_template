@@ -53,7 +53,7 @@ class ShopProductDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 150,
-      width: 200,
+      width: 80,
       child: Stack(children: <Widget>[
         // Positioned(
         //   left: 25,
@@ -67,7 +67,7 @@ class ShopProductDisplay extends StatelessWidget {
         //   ),
         // ),
         Positioned(
-          left: 50,
+          left: 0,
           top: 5,
           child: SizedBox(
               height: 80,
@@ -80,8 +80,8 @@ class ShopProductDisplay extends StatelessWidget {
                     )),
         ),
         Positioned(
-          right: 30,
-          bottom: 25,
+          left: 0,
+          bottom: 0,
           child: Align(
             child: IconButton(
               icon: Image.asset('assets/red_clear.png'),

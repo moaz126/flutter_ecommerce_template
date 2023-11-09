@@ -3,15 +3,17 @@ import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/custom_background.dart';
 import 'package:ecommerce_int2/models/product.dart';
 import 'package:ecommerce_int2/screens/category/category_list_page.dart';
-import 'package:ecommerce_int2/screens/notifications_page.dart';
+import 'package:ecommerce_int2/screens/main/components/recommended_list.dart';
 import 'package:ecommerce_int2/screens/profile_page.dart';
 import 'package:ecommerce_int2/screens/search_page.dart';
 import 'package:ecommerce_int2/screens/shop/check_out_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import 'components/custom_bottom_bar.dart';
 import 'components/product_list.dart';
 import 'components/tab_view.dart';
+import 'ecplast_website.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -57,6 +59,7 @@ class _MainPageState extends State<MainPage>
 
       products.add(product);
     });
+    searchProducts = products;
     print('ho gya' + products.length.toString());
     // Return the list of product documents
     setState(() {
@@ -69,7 +72,7 @@ class _MainPageState extends State<MainPage>
   void initState() {
     super.initState();
     tabController = TabController(length: 6, vsync: this);
-    bottomTabController = TabController(length: 4, vsync: this);
+    bottomTabController = TabController(length: 5, vsync: this);
     fetchProductsByCategory();
   }
 
@@ -206,7 +209,8 @@ class _MainPageState extends State<MainPage>
             ),
             CategoryListPage(),
             CheckOutPage(),
-            ProfilePage()
+            ProfilePage(),
+            EcoplastWebsite(),
           ],
         ),
       ),

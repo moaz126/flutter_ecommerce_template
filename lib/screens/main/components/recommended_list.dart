@@ -4,9 +4,9 @@ import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/models/product.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommerce_int2/screens/main/components/show_products.dart';
-import 'package:ecommerce_int2/screens/product/product_page.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
+
+List<Product> searchProducts = [];
 
 class RecommendedList extends StatefulWidget {
   final String category;
@@ -37,7 +37,6 @@ class _RecommendedListState extends State<RecommendedList> {
     final querySnapshot = await productsCollection
         .where('category', isEqualTo: widget.category)
         .get();
-    print('asdfasdfasdfasdf');
     print(querySnapshot.docs.length);
     querySnapshot.docs.forEach((doc) {
       // Extract the data from the document snapshot
@@ -56,6 +55,7 @@ class _RecommendedListState extends State<RecommendedList> {
 
       products.add(product);
     });
+    searchProducts = products;
     log(products.length.toString());
     print('ho gya' + products.length.toString());
     // Return the list of product documents
