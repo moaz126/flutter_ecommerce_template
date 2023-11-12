@@ -1,16 +1,22 @@
-import 'dart:convert';
-
 import 'package:ecommerce_int2/app_properties.dart';
 import 'package:ecommerce_int2/screens/address/address_form.dart';
 import 'package:ecommerce_int2/services/global_variable.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:http/http.dart' as http;
+
 import '../../api_service.dart';
 import '../../models/product.dart';
-import '../main/main_page.dart';
 
 class AddAddressPage extends StatelessWidget {
+  void sendWhatsAppMessage(String phoneNumber, String message) async {
+    String url =
+        "https://wa.me/$phoneNumber?text=${Uri.encodeComponent(message)}";
+
+    if (await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication)) {
+      throw 'Could not launch $url';
+    }
+  }
+
   Future<void> sendEmailapi(context) async {
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     // final apiKey = 'YOUR_API_KEY'; // Replace with your EmailJS API key
@@ -28,25 +34,28 @@ class AddAddressPage extends StatelessWidget {
         "reply_to": emailController.text
       }, // Replace with your template parameters
     };
-    final response = await http.post(url,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: jsonEncode(body));
-    print(response.body);
-    if (response.statusCode == 200) {
-      customToast('Письмо успешно отправлено!');
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => MainPage()),
-        (Route<dynamic> route) => false,
-      );
-      print('Email sent successfully!');
-    } else {
-      customToast(
-          'Не удалось отправить электронное письмо. Ошибка: ${response.body}');
-      print('Failed to send email. Error: ${response.body}');
-    }
+    print('object');
+    print(message);
+    sendWhatsAppMessage('+996705670454', message);
+    // final response = await http.post(url,
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: jsonEncode(body));
+    // print(response.body);
+    // if (response.statusCode == 200) {
+    //   customToast('Письмо успешно отправлено!');
+    //   Navigator.pushAndRemoveUntil(
+    //     context,
+    //     MaterialPageRoute(builder: (context) => MainPage()),
+    //     (Route<dynamic> route) => false,
+    //   );
+    //   print('Email sent successfully!');
+    // } else {
+    //   customToast(
+    //       'Не удалось отправить электронное письмо. Ошибка: ${response.body}');
+    //   print('Failed to send email. Error: ${response.body}');
+    // }
   }
 
   void sendEmail1(String email, List<Product> cartProducts) async {
